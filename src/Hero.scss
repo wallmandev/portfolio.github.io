@@ -1,0 +1,72 @@
+.hero {
+  min-height: 100vh;
+  padding: 8rem 0;
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) [inner-start] minmax(0, 67.5rem) [inner-end] minmax(2rem, 1fr);
+
+  &__inner {
+    grid-column: inner-start / inner-end;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    margin: 0;
+    padding: 0;
+    color: #fffcf2;
+
+    .hero__title {
+      font-size: 10rem;
+      margin: 0;
+
+      span {
+        display: inline-block;
+        color: #f11448;
+      }
+    }
+
+    .letter {
+      position: relative;
+      display: inline-block;
+      font-size: inherit;
+      line-height: 1;
+    }
+
+    .eyelid {
+      position: absolute;
+      top: 45%;  // Starta ögonlocket från toppen
+      left: 30%; // Justera horisontell position
+      width: 40%;  // Täck bara det inre utrymmet, inte hela bokstaven
+      height: 13%; // Hela höjden på bokstaven, så att den kan täcka hela utrymmet
+      background-color: #f11448; // Samma färg som texten
+      transform-origin: top; // Starta från toppen och täck neråt
+      border-radius: 50%; // Rundning för att simulera ett ögonlock
+    }
+
+    .hero__description {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #9A9892;
+      margin: -0.2rem 0 0 0.4rem;
+
+      span {
+        color: #fffcf2;
+      }
+    }
+  }
+} 
+
+@media (max-width: 600px) {
+  .hero__content .hero__title{
+    font-size: 7rem;
+  }
+  
+}
+
+@media (max-width: 410px) {
+  .hero__content .hero__title{
+    font-size: 5rem;
+  }
+  
+}
+  

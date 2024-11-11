@@ -1,0 +1,40 @@
+// Footer.scss
+.footer {
+    min-height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 2rem;
+    text-align: center;
+  
+    &__content {
+      color: #6F6F6F;
+    }
+  
+    .scroll-up {
+      position: fixed;
+      right: 64px;
+      bottom: 64px;
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+      border: 1px solid #222;
+      background-color: #fffcf2;
+      transition: background-color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      &:hover {
+        background-color: #f11448;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 760px) {
+
+    .footer .scroll-up{
+      display: none;
+    }
+  }

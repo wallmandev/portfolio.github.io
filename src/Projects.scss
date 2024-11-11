@@ -1,0 +1,121 @@
+.projects {
+  padding: 8rem 0;
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) [inner-start] minmax(0, 67.5rem) [inner-end] minmax(2rem, 1fr);
+
+  &__inner {
+    grid-column: inner;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+    column-gap: 5rem;
+  }
+
+  &__title {
+    color: #fffcf2;
+    font-weight: 400;
+    margin-top: 0;
+    font-size: clamp(2rem, -1rem + 13.3333vw, 3rem);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    gap: 5rem 3rem;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+  
+    &__link {
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: color 0.2s ease; // Mjuk övergång för textfärg
+      cursor: pointer;
+  
+      &:hover {
+        color: #ffffff; // När länken hovras, mjuka till färgen till vitt
+      }
+  
+      &:hover svg {
+        transform: translate(1rem, 0.15rem); // Flytta SVG:n 0.5rem åt höger men behåll Y-positionen oförändrad
+        transition: transform 0.2s ease; // Mjuk övergång för SVG-rörelsen
+      }
+  
+      svg {
+        transform: translate(0, 0.15rem); // Ursprungsläge för SVG (samma Y-värde som innan)
+        transition: transform 0.2s ease;
+      }
+    }
+  
+  
+
+    &__image {
+      margin: 0;
+      aspect-ratio: 16 / 9;
+    }
+
+    &__header {
+      order: 2;
+      font-size: 2rem;
+      color: #fffcf2;
+    }
+
+    &__details {
+      order: 1;
+      position: relative;
+      margin-bottom: 2.4rem;
+
+      .project__image img {
+        display: block;
+        width: 100%;
+        min-height: 331px;
+        object-fit: cover;
+      }
+    }
+
+    &__meta {
+      position: absolute;
+      background-color: #fffcf2;
+      padding: 0.5rem 1rem 0.6rem;
+      font-weight: 700;
+      bottom: 16px;
+      left: -16px;
+    }
+
+    &__content {
+      order: 3;
+
+      p {
+        color: #9A9892;
+        line-height: 1.33;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: center;
+      order: 5;
+
+      .project__permalink {
+        font-weight: 700;
+        transition: color 0.2s ease; // Lägg till en mjuk övergång för färg
+
+        &:hover {
+          color: #FFFCF2;
+        }
+      }
+    }
+  }
+}
+strong{
+  color: #FFFCF2;
+}

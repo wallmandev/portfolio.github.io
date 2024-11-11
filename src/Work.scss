@@ -1,0 +1,123 @@
+.work {
+  padding: 8rem 0;
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) [inner-start] minmax(0, 67.5rem) [inner-end] minmax(2rem, 1fr);
+  background-color: #FFFCF2;
+
+  &__inner {
+    grid-column: inner;
+  }
+
+  &__title {
+    margin-top: 0;
+    font-size: clamp(2rem, -1rem + 13.3333vw, 3rem);
+  }
+
+  &__header {
+    margin-bottom: 5rem;
+    max-width: 40rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 1.66;
+  }
+
+  &__link {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.2s;
+  }
+
+  a.arrow-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.2s;
+    max-width: 180px;
+
+    svg {
+      transform: translate(0, 0.15rem);
+      transition: transform 0.2s;
+    }
+
+    &:hover svg {
+      transform: translate(1rem, 0.15rem);
+    }
+  }
+
+  .gallery {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Standard layout */
+    grid-auto-rows: 250px;
+
+    figure {
+      margin: 0;
+    }
+
+    &__item {
+      overflow: hidden;
+
+      &:nth-of-type(3) {
+        grid-row: span 2;
+      }
+
+      &:nth-of-type(4) {
+        grid-row: span 2;
+        grid-column: span 2;
+      }
+
+      .gallery__image {
+        display: block;
+        height: 100%;
+        // width: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 875px) {
+  .work .gallery {
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Anpassa till 2 kolumner */
+    grid-auto-rows: 200px; /* Anpassa höjden på raderna för mindre skärmar */
+  }
+
+  .work .gallery__item {
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      grid-row: auto; /* Förhindra att bilderna täcker två rader */
+      grid-column: auto; /* Förhindra att bilderna täcker två kolumner */
+    }
+  }
+}
+
+/* Media query för mycket små skärmar (t.ex. mobil) */
+@media (max-width: 600px) {
+  .work .gallery {
+    grid-template-columns: 1fr; /* En kolumn layout för små skärmar */
+    grid-auto-rows: auto;
+  }
+
+  .work .gallery__item {
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      grid-row: auto; 
+      grid-column: auto;
+    }
+  }
+
+  .work .gallery__image{
+    width: 100%;
+  }
+}
