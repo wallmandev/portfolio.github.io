@@ -110,6 +110,55 @@ function Projects() {
 
             </article>
 
+            <article className="project">
+
+              <header className="project__header">
+                <h3 className="project__title">Project 3</h3>
+              </header>
+
+              <div className="project__details">
+                <figure className="project__image">
+                  <img className="project__image--restaurant" src="./src/assets/images/4-E-Project.png" alt="Restaurant Project" />
+                </figure>
+                <div className="project__meta">2024 / 2025</div>
+              </div>
+
+              <div className="project__content">
+                <p>I developed a restaurant management app designed to streamline operations and enhance the dining experience for both customers and staff.<br>
+
+                  </br>
+                  <ul>
+
+                    <li>
+                      <strong>Order Management:</strong> An intuitive system that allows waitstaff to take orders digitally and send them directly to the kitchen, reducing errors and improving efficiency.
+                    </li><br></br>
+
+                    <li>
+                      <strong>Dynamic Menu Integration:</strong> The site showcases a digital menu where customers can explore dishes with descriptions and images, and even highlight specials or seasonal options.
+                    </li><br></br>
+
+                    <li>
+                    <strong>Responsive Design:</strong> Built with a modern and responsive design, the app provides a seamless experience across devices, ensuring usability for both customers and staff.
+                    </li><br></br>                 
+
+                    <li>
+                    <strong>Custom Backend Integration:</strong> The app includes a backend system for restaurant owners to update menus, monitor orders, and track analytics for better business decisions.
+                    </li><br></br>
+
+                    <li>
+                    <strong>Scalable Design:</strong> Developed with scalability in mind, the app can be tailored to fit small cafes or large restaurant chains, adapting to specific business needs.
+                    </li>
+                  </ul>
+
+                  
+                </p>
+              </div>
+
+              <div className="project__footer">
+                <a href="https://github.com/4E-Four-Elements-Project/frontend" target="_blank" className="project__permalink">Link to project</a>
+              </div>
+
+            </article>
           </div>
         </div>
       </section>
