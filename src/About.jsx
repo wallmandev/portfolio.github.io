@@ -68,9 +68,21 @@ function About() {
           <button onClick={handleCloseClick} className="about__close">X</button>
           <img className="about__image" src={portrait} alt=""></img>
           <p ref={textRef} className={`about__text ${showFullText ? 'about__text--hidden' : ''}`}>
-            Hi, I'm Christoffer Wallman – a web developer with a strong passion for programming, technology, and gaming. My journey into web development started after years of working in the industrial and welding fields. The experience taught me the value of precision, problem-solving, and attention to detail, which I now bring into my development projects.
+          Hi, I’m Christoffer Wallman, a passionate web developer who thrives on creating innovative and efficient digital solutions. My journey into web development began after a career in the industrial and welding fields, where I honed skills in precision, problem-solving, and attention to detail. These qualities now fuel my approach to coding and project development.
 
-            Today, I'm dedicated to creating clean, efficient, and user-friendly digital experiences. My work focuses on providing secure and innovative IT solutions, with an emphasis on Azure IoT, Microsoft 365 security, and WordPress development tailored for the industrial sector. When I’m not coding, you’ll probably find me exploring new technologies or strategizing in my favorite games.
+          I specialize in modern web technologies such as React, TypeScript, Node.js, and SASS, focusing on building responsive, scalable, and user-friendly applications. My recent projects include:<br></br><br></br>
+
+          CropCollect: A web application designed to connect local farmers with buyers, streamlining transactions while promoting sustainability. This project challenged me to integrate real-time features using React.<br></br><br></br>
+
+          Azure IoT Solutions: Developing secure and reliable integrations for industrial IoT systems, ensuring seamless data flow and enhanced operational efficiency.<br></br><br></br>
+
+          C#, .NET and MAUI app development.<br></br><br></br>
+
+          Beyond my professional work, I enjoy diving into side projects that challenge my creativity and technical skills. Whether it’s designing interactive interfaces, optimizing database structures, or implementing cutting-edge security features, I’m always eager to push the boundaries of what’s possible.
+
+          When I’m not coding, you can find me strategizing in my favorite games, exploring new technologies, or brainstorming the next big idea.<br></br><br></br>
+
+          Let’s build something amazing together! 🚀
           </p>
           {!showFullText && (
             <span className="about__read-more" onClick={handleShowFullTextClick}>

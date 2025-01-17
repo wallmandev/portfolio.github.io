@@ -33,6 +33,7 @@
   &__text {
     font-size: 1.5rem;
     line-height: 1.66;
+    color: #3b3b3b;
   }
 
   &__content {
@@ -103,6 +104,7 @@
 
     .about__read-more {
       background: none;
+      display: none;
       border: none;
       font-family: 'Fieldwork', sans-serif;
       text-decoration: underline;
@@ -199,6 +201,9 @@
   .about__more{
     width: 90%;
   }
+  .about__read-more{
+    display: block;
+  }
 
   .about__image{
     height: 300px;
@@ -210,6 +215,9 @@
     width: 95%;
     height: 90%;
   }
+  .about__read-more{
+    display: block;
+  }
 
   .about__image{
     height: 300px;
@@ -220,6 +228,9 @@
   .about__more{
     width: 95%;
     height: 80%;
+  }
+  .about__read-more{
+    display: block;
   }
 
   .about__image{
