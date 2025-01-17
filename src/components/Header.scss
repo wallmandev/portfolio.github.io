@@ -115,7 +115,7 @@
   position: absolute;
   top: 30%;
   height: 85px;
-  left: -3em; /* Visas vid menyns vänstra kant */
+  left: -2em; /* Visas vid menyns vänstra kant */
   transform: translateY(-50%);
   background: #555;
   color: white;
@@ -154,6 +154,8 @@
 
   .menu-close-arrow{
     display: block;
+    left: -40px;
+
   }
 
   .menu-button {
@@ -161,3 +163,10 @@
     margin-right: 2rem;
   }
 }
+
+@media only screen and (max-width: 760px) and (-webkit-min-device-pixel-ratio: 3) {
+  .menu-close-arrow {
+    left: -15px; /* Anpassa specifikt för samsung enheter */
+  }
+}
+

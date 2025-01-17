@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import './About.scss';
+import portrait from '../src/assets/images/Christoffer.png'
+import linkedin from '../src/assets/icons/linkedin.svg'
 
 function About() {
   const [showMore, setShowMore] = useState(false);
@@ -41,11 +43,11 @@ function About() {
   };
 
   return (
-    <section id="about" className="about">
+    <section id="about" className={`about ${showMore ? 'no-interaction' : ''}`}>
       <div className="about__inner">
         <div className="about__social">
           <ul className="social">
-            <li className="social__item"><a href="#" className="social__link"><img src="./src/assets/icons/linkedin.svg" alt="linkedin Logo" /></a></li>
+            <li className="social__item"><a href="#" className="social__link"><img src={linkedin} alt="linkedin Logo" /></a></li>
           </ul>
         </div>
         <div className="about__content">
@@ -64,7 +66,7 @@ function About() {
         </div>
         <div className={`about__more ${showMore ? 'show' : ''} ${animateOut ? 'hide' : ''}`}>
           <button onClick={handleCloseClick} className="about__close">X</button>
-          <img className="about__image" src="src/assets/images/Christoffer.png" alt=""></img>
+          <img className="about__image" src={portrait} alt=""></img>
           <p ref={textRef} className={`about__text ${showFullText ? 'about__text--hidden' : ''}`}>
             Hi, I'm Christoffer Wallman – a web developer with a strong passion for programming, technology, and gaming. My journey into web development started after years of working in the industrial and welding fields. The experience taught me the value of precision, problem-solving, and attention to detail, which I now bring into my development projects.
 

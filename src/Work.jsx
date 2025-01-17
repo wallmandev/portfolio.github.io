@@ -1,5 +1,11 @@
 import React from "react";
 import './Work.scss';
+import restaurant from '../src/assets/images/Restaurant.png'
+import hike from '../src/assets/images/Hike.png'
+import bdocs from '../src/assets/images/bdocs.png'
+import training from '../src/assets/images/Training.png'
+import portfolio from '../src/assets/images/Portfolio.png'
+
 
 function Work() {
     return (
@@ -21,12 +27,11 @@ function Work() {
           </header>
           <div className="gallery">
             {/* Replace with dynamic content later */}
-            <figure className="gallery__item"><a href="https://github.com/wallmandev/Project-4/tree/main" target="_blank"><img src="./src/assets/images/Restaurant.png" alt="" className="gallery__image" /></a></figure>
-            <figure className="gallery__item"><a href="https://github.com/wallmandev/project-3-school-2022/tree/main" target="_blank"><img src="./src/assets/images/Hike.png" alt="" className="gallery__image" /></a></figure>
-            <figure className="gallery__item"><a href="https://github.com/wallmandev/bdocs---theme/tree/main" target="_blank"><img src="./src/assets/images/Bdocs.png" alt="" className="gallery__image" /></a></figure>
-            <figure className="gallery__item"><img src="./src/assets/images/Training.png" alt="" className="gallery__image" /></figure>
-            <figure className="gallery__item"><img src="./src/assets/images/Portfolio.png" alt="" className="gallery__image" /></figure>
-            {/* <figure className="gallery__item"><img src="./src/assets/images/work5@2x.jpg" alt="" className="gallery__image" /></figure> */}
+            <figure className="gallery__item"><a href="https://github.com/wallmandev/Project-4/tree/main" target="_blank"><img src={restaurant} alt="" className="gallery__image" /></a></figure>
+            <figure className="gallery__item"><a href="https://github.com/wallmandev/project-3-school-2022/tree/main" target="_blank"><img src={hike} alt="" className="gallery__image" /></a></figure>
+            <figure className="gallery__item"><a href="https://github.com/wallmandev/bdocs---theme/tree/main" target="_blank"><img src={bdocs} alt="" className="gallery__image" /></a></figure>
+            <figure className="gallery__item"><a href="https://github.com/wallmandev/bdocs---theme/tree/main" target="_blank"><img src={training} alt="" className="gallery__image" /></a></figure>
+            <figure className="gallery__item"><a href="https://github.com/wallmandev/bdocs---theme/tree/main" target="_blank"><img src={portfolio} alt="" className="gallery__image" /></a></figure>
           </div>
         </div>
       </section>

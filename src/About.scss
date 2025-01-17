@@ -8,9 +8,14 @@
 
 .about {
   padding: 8rem 0;
+  pointer-events: auto;
   display: grid;
   grid-template-columns: minmax(2rem, 1fr) [inner-start] minmax(0, 67.5rem) [inner-end] minmax(2rem, 1fr);
   background-color: #FFFCF2;
+
+  &.no-interaction{
+    pointer-events: none; /* Förhindra interaktion */
+  }
 
   &__inner {
     grid-column: inner;
@@ -55,23 +60,26 @@
 
   &__more {
     position: fixed;
-    top: 50%;
+    top: 50%; 
     left: 50%;
     width: 80%;
-    height: 70%;
-    background-color: #FFFCF2;
+    border-radius: 5px;
+    height: 90%;
+    background-color: #fffcf2;
     box-shadow: -2px 0 5px rgba(0,0,0,0.5);
     transform: translate(-50%, -50%) translateX(100%);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
     z-index: 999999999;
+    backdrop-filter: blur(10px);
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Ändra från center till flex-start */
+    justify-content: flex-start; 
     opacity: 0;
     visibility: hidden;
-    overflow-y: auto; /* Gör diven scrollbar */
+    overflow-y: auto;
+    pointer-events: auto;
 
     &.show {
       transform: translate(-50%, -50%) translateX(0);
@@ -108,6 +116,10 @@
       font-family: 'Fieldwork', sans-serif;
       text-decoration: underline;
       font-size: 1rem;
+
+      &:hover{
+        cursor: pointer;
+      }
     }
 
     @media (max-width: 670px) {

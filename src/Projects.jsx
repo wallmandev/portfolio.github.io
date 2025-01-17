@@ -1,5 +1,8 @@
 import React from "react";
 import './Projects.scss';
+import solsystemet from '../src/assets/images/solsystemet.png';
+import wedding from '../src/assets/images/RonjaAndPatrik@2x.jpg';
+import schoolproj from '../src/assets/images/4-E-Project.png'
 
 function Projects() {
     return (
@@ -29,7 +32,7 @@ function Projects() {
 
               <div className="project__details">
                 <figure className="project__image">
-                  <img src="./src/assets/images/solsystemet.png" alt="Project description" />
+                  <img src={solsystemet} alt="Project description" />
                 </figure>
                 <div className="project__meta">2023</div>
               </div>
@@ -68,7 +71,7 @@ function Projects() {
 
               <div className="project__details">
                 <figure className="project__image">
-                  <img src="./src/assets/images/RonjaAndPatrik@2x.jpg" alt="Project description" />
+                  <img src={wedding} alt="Project description" />
                 </figure>
                 <div className="project__meta">2024</div>
               </div>
@@ -118,7 +121,7 @@ function Projects() {
 
               <div className="project__details">
                 <figure className="project__image">
-                  <img className="project__image--restaurant" src="./src/assets/images/4-E-Project.png" alt="Restaurant Project" />
+                  <img className="project__image--restaurant" src={schoolproj} alt="Restaurant Project" />
                 </figure>
                 <div className="project__meta">2024 / 2025</div>
               </div>
