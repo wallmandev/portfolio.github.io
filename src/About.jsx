@@ -74,9 +74,7 @@ function About() {
 
           CropCollect: A web application designed to connect local farmers with buyers, streamlining transactions while promoting sustainability. This project challenged me to integrate real-time features using React.<br></br><br></br>
 
-          Azure IoT Solutions: Developing secure and reliable integrations for industrial IoT systems, ensuring seamless data flow and enhanced operational efficiency.<br></br><br></br>
-
-          C#, .NET and MAUI app development.<br></br><br></br>
+          C#, .NET, and MAUI app development for a Danish company involving their fleet of buses.<br></br><br></br>
 
           Beyond my professional work, I enjoy diving into side projects that challenge my creativity and technical skills. Whether it’s designing interactive interfaces, optimizing database structures, or implementing cutting-edge security features, I’m always eager to push the boundaries of what’s possible.
 
